@@ -44,13 +44,14 @@ set(config_module_list
 	modules/load_mon
 	modules/navigator
 	modules/mavlink
+	modules/uavcan
 	modules/land_detector
 
 	#
 	# Estimation modules
 	#
 	modules/attitude_estimator_q
-	modules/local_position_estimator
+	#modules/local_position_estimator
 	modules/ekf2
 
 	#
@@ -86,3 +87,8 @@ set(config_module_list
 	lib/rc
 	lib/version
 )
+
+set(config_extra_libs
+	uavcan
+	uavcan_stm32_driver
+	)

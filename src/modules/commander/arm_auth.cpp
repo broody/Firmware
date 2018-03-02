@@ -58,11 +58,11 @@ static enum {
 } state = ARM_AUTH_IDLE;
 
 struct packed_struct {
-	uint8_t authorizer_system_id;
 	union {
 		uint16_t auth_method_arm_timeout_msec;
 		uint16_t auth_method_two_arm_timeout_msec;
 	} auth_method_param;
+	uint8_t authorizer_system_id;
 	uint8_t authentication_method;
 } arm_parameters;
 

@@ -152,6 +152,10 @@
 
 #define CRASHDUMP_RESET_ONLY
 
+/* This board provides a DMA pool and APIs */
+#define BOARD_DMA_ALLOC_POOL_SIZE 5120
+
+
 __BEGIN_DECLS
 
 /****************************************************************************************************
@@ -180,16 +184,6 @@ extern void stm32_spiinitialize(void);
 
 #define board_spi_reset(ms)
 #define board_peripheral_reset(ms)
-
-/************************************************************************************
- * Name: board_sdio_initialize
- *
- * Description:
- *   Called to configure SDIO.
- *
- ************************************************************************************/
-
-extern int board_sdio_initialize(void);
 
 #include "../common/board_common.h"
 
